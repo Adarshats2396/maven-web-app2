@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SLK- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
+<link href="images/adhi.jpg" rel="icon">
 </head>
 <body>
 <h1 align="center">SLK Software</h1>
