@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: mavenwebappcontainer
-          image: slkgroup.jfrog.io/docker-local/maven1:1
+          image: slkgroup.jfrog.io/docker-local/maven1:12
           ports:
             - containerPort: 8080
           resources:
