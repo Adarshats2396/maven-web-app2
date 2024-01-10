@@ -28,6 +28,9 @@
 <hr>
 <p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
-<hr
+<hr>
+<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
+<p align=center><small>Copyrights 2024 by <a href="Adarsha">Bengaluru</a> </small></p>
+
 </body>
 </html>
