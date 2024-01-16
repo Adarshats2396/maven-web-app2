@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-helm-chart.fullname" . }}
+  name: {{ include "mavenapp.fullname" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   strategy:
@@ -11,7 +11,7 @@ spec:
       app: mavenwebapp
   template:
     metadata:
-      name: {{ include "my-helm-chart.fullname" . }}
+      name: {{ include "mavnapp.fullname" . }}
       labels:
         app: mavenwebapp
     spec:
