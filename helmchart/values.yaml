@@ -11,3 +11,12 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+ 
+service:
+  type: LoadBalancer
+  # Add any additional service-related values if needed
+  annotations:
+service.beta.kubernetes.io/aws-load-balancer-internal: "false" # Example annotation for AWS
+  externalTrafficPolicy: Cluster # Example externalTrafficPolicy setting
+  # Add any other service-related configurations here
+has context menu
