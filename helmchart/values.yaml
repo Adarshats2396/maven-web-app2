@@ -1,9 +1,7 @@
 replicaCount: 2
- 
 image:
-repository: slkgroup.jfrog.io/docker-local/maven-web-app/maven-web-app
-  tag: 1
- 
+repository: slkgroup.jfrog.io/docker-local/maven1
+  tag: latest
 resources:
   requests:
     cpu: 200m
@@ -11,12 +9,8 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
- 
 service:
+  name: mavenwebappsvc
   type: LoadBalancer
-  # Add any additional service-related values if needed
-  annotations:
-service.beta.kubernetes.io/aws-load-balancer-internal: "false" # Example annotation for AWS
-  externalTrafficPolicy: Cluster # Example externalTrafficPolicy setting
-  # Add any other service-related configurations here
-has context menu
+  port: 80
+  targetPort: 8080

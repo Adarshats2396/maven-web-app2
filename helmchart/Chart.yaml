@@ -1,5 +1,5 @@
 apiVersion: v2
-name: my-helm-chart
-description: A Helm chart for deploying a Maven web application
+name: mavenwebapp
+description: A Helm chart for deploying Maven web application
 version: 0.1.0
-appVersion: 1.0
+appVersion: 1.0.0
