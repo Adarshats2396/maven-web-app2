@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_IMAGE_NAME = 'adarsha.jfrog.io/sample/maven'
+		Image_Tag = "${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}"
+    }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                script {
+                    git credentialsId: 'guthub', url: 'https://github.com/Adarshats2396/maven-web-app2.git'
+                    echo 'Code cloned successfully'
+                }
+            }
+        }
+ 
+        stage('Build with Maven') {
+            steps {
+                script {
+                    sh 'mvn clean install'
+                }
+            }
+        }
+ 
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t ${Image_Tag} ."
+                }
+            }
+        }
+ 
+        stage('push docker image to jfrog registry') {
+            steps {
+                script {
+               withCredentials([string(credentialsId: 'fis_new', variable: 'fis')]) {
+                       sh 'docker login -u adarshgowda676@gmail.com adarsha.jfrog.io -p ${fis}'
+                       sh "docker push ${Image_Tag}"
+                    }
+                }
+            }
+        }
+    }
+}
