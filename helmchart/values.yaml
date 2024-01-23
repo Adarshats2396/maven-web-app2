@@ -1,5 +1,10 @@
 replicaCount: 2
-image: adarsha.jfrog.io/sample/maven:5
+
+image:
+  repository: adarsha.jfrog.io/sample/maven
+  pullPolicy: IfNotPresent
+  tag: 5
+
 resources:
   requests:
     cpu: 200m
@@ -7,6 +12,7 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+
 service:
   name: mavenwebappsvc
   type: LoadBalancer
