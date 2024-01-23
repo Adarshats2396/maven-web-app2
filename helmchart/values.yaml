@@ -1,6 +1,5 @@
 replicaCount: 2
-image: adarsha.jfrog.io/sample/maven
-  tag: 5
+image: adarsha.jfrog.io/sample/maven:5
 resources:
   requests:
     cpu: 200m
