@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
-repository: slkgroup.jfrog.io/docker-local/maven1
-  tag: latest
+repository: adarsha.jfrog.io/sample/maven
+  tag: 5
 resources:
   requests:
     cpu: 200m
