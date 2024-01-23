@@ -1,6 +1,5 @@
 replicaCount: 2
-image:
-repository: adarsha.jfrog.io/sample/maven
+image: adarsha.jfrog.io/sample/maven
   tag: 5
 resources:
   requests:
