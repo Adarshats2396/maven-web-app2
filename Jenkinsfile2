@@ -18,7 +18,7 @@ DOCKER_IMAGE_NAME = 'adarsha.jfrog.io/sample/maven'
         stage('Build with Maven') {
             steps {
                 script {
-                    sh 'mvn clean install'
+                    maven()
                 }
             }
         }
